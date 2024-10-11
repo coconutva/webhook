@@ -1,7 +1,11 @@
-const functions = require('firebase-functions');
-const admin = require('firebase-admin');
-admin.initializeApp();
+const express = require('express');
+const app = express();
 
-exports.helloWorld = functions.https.onRequest((request, response) => {
-  response.send("Hello from Firebase!");
+const port = process.env.PORT || 8080;  // Use a variável de ambiente PORT ou 8080 por padrão
+app.get('/', (req, res) => {
+  res.send('Hello from Cloud Run!');
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
