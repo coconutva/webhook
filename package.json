@@ -1,17 +1,11 @@
 {
-  "name": "my-backend",
-  "description": "Firebase Functions backend",
+  "name": "my-cloud-run-app",
   "version": "1.0.0",
   "main": "index.js",
-  "engines": {
-    "node": "16" 
-  },
   "scripts": {
-    "deploy": "firebase deploy --only functions"
+    "start": "node index.js"
   },
   "dependencies": {
-    "firebase-admin": "^11.0.0",
-    "firebase-functions": "^4.0.0"
+    "express": "^4.17.1"
   }
 }
-
